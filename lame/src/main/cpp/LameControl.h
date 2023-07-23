@@ -21,6 +21,8 @@ jint lame_control_flush(JNIEnv *env, jclass type, jbyteArray mp3buf_);
 
 void lame_control_init(JNIEnv *env, jclass type, jint inSampleRate,
                        jint outChannel, jint outSampleRate, jint outBitrate, jint quality);
+
+int lame_mp3_to_pcm(JNIEnv *env, jclass type, jstring, jstring);
 #ifdef __cplusplus
 }
 #endif

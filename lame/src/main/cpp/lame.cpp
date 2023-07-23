@@ -9,6 +9,7 @@
 
 static JNINativeMethod lameControlNativeMethods[] = {
         /* name, signature, funcPtr */
+        {"mp3ToPCM",             "(Ljava/lang/String;Ljava/lang/String;)I",        (void *) lame_mp3_to_pcm},
         {"close",             "()V",        (void *) lame_control_close},
         {"encode",            "([S[SI[B)I", (void *) lame_control_encode},
         {"encodeInterleaved", "([SI[B)I",   (void *) lame_control_encode_interleaved},

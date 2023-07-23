@@ -14,7 +14,7 @@ project("lame")
 # You can define multiple libraries, and CMake builds them for you.
 # Gradle automatically packages shared libraries with your APK.
 
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O0 -g -DSTDC_HEADERS")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O0 -g -DSTDC_HEADERS -DHAVE_MPGLIB")
 # Creates and names a library, sets it as either STATIC
 # or SHARED, and provides the relative paths to its source code.
 # You can define multiple libraries, and CMake builds them for you.
@@ -52,6 +52,14 @@ add_library( # Sets the name of the library.
         lame/vbrquantize.c
         lame/VbrTag.c
         lame/version.c
+        lame/common.c
+        lame/dct64_i386.c
+        lame/decode_i386.c
+        lame/interface.c
+        lame/layer1.c
+        lame/layer2.c
+        lame/layer3.c
+        lame/tabinit.c
         )
 # Searches for a specified prebuilt library and stores the path as a
 # variable. Because CMake includes system libraries in the search path by
