@@ -2,6 +2,11 @@ plugins {
     id 'com.android.library'
 }
 
+apply from: '../maven_publish.gradle'
+rootProject.ext.PUBLISH_ARTIFACT_ID = "xml-parse"
+rootProject.ext.PUBLISH_VERSION = "1.0.1001"
+rootProject.ext.PUBLISH_DESC = "xml 解析"
+
 android {
     namespace 'com.hualee.xmlparse'
     compileSdk 33

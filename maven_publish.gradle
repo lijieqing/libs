@@ -29,7 +29,10 @@ afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
-                println("publish-maven Log-------> PUBLISH_GROUP_ID: $rootProject.ext.PUBLISH_GROUP_ID; PUBLISH_ARTIFACT_ID: $rootProject.ext.PUBLISH_ARTIFACT_ID; PUBLISH_VERSION: $rootProject.ext.PUBLISH_VERSION")
+                println("publish-maven Log-------> PUBLISH_GROUP_ID: $rootProject.ext.PUBLISH_GROUP_ID;")
+                println("publish-maven Log-------> PUBLISH_ARTIFACT_ID: $rootProject.ext.PUBLISH_ARTIFACT_ID;")
+                println("publish-maven Log-------> PUBLISH_VERSION: $rootProject.ext.PUBLISH_VERSION")
+                println("publish-maven Log-------> PUBLISH_DESC: $rootProject.ext.PUBLISH_DESC;")
                 // The coordinates of the library, being set from variables that
                 // we'll set up in a moment
 
@@ -46,7 +49,7 @@ afterEvaluate {
                 pom {
                     //--- 修改配置三 ---
                     name = rootProject.ext.PUBLISH_ARTIFACT_ID
-                    description = '上传aar插件至mavencentral，方便使用implementation快速引入' //添加文件描述
+                    description = rootProject.ext.PUBLISH_DESC
                     // If your project has a dedicated site, use its URL here
                     url = 'https://github.com/lijieqing/libs' //项目github链接
                     licenses {

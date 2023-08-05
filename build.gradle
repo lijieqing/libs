@@ -4,11 +4,11 @@ buildscript {
         PUBLISH_GROUP_ID = 'io.github.lijieqing'
         PUBLISH_ARTIFACT_ID = ''
         PUBLISH_VERSION = ''
+        PUBLISH_DESC = '上传aar插件至mavencentral，方便使用implementation快速引入'
     }
     repositories {
         google()
         mavenCentral()
-        maven { url "https://jitpack.io" }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.1.2'

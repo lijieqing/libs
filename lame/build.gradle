@@ -2,9 +2,10 @@ plugins {
     id 'com.android.library'
 }
 
-apply from:'../maven_publish.gradle'
+apply from: '../maven_publish.gradle'
 rootProject.ext.PUBLISH_ARTIFACT_ID = "lame"
 rootProject.ext.PUBLISH_VERSION = "1.0.1032"
+rootProject.ext.PUBLISH_DESC = "lame 库, PCM->MP3 or MP3->PCM"
 
 android {
     namespace 'com.hualee.lame'
