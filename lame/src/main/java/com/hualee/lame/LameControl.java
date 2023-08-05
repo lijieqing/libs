@@ -14,8 +14,6 @@ public class LameControl {
 
     public native static void init(int inSampleRate, int outChannel, int outSampleRate, int outBitrate, int quality);
 
-    public native static int mp3ToPCM(String mp3File, String pcmFile);
-
     static {
         System.loadLibrary("lame");
     }

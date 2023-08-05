@@ -32,6 +32,7 @@ add_library( # Sets the name of the library.
         # Provides a relative path to your source file(s).
         lame.cpp
         LameControl.cpp
+        LameDecode.cpp
         lame/bitstream.c
         lame/encoder.c
         lame/fft.c

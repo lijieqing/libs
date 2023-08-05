@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 rootProject.name = "libs"
 include ':app'
 include ':lame'
+include ':xmlparse'

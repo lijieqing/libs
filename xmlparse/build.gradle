@@ -2,37 +2,22 @@ plugins {
     id 'com.android.library'
 }
 
-apply from:'../maven_publish.gradle'
-rootProject.ext.PUBLISH_ARTIFACT_ID = "lame"
-rootProject.ext.PUBLISH_VERSION = "1.0.1032"
-
 android {
-    namespace 'com.hualee.lame'
+    namespace 'com.hualee.xmlparse'
     compileSdk 33
 
     defaultConfig {
-        minSdk 23
+        minSdk 24
         targetSdk 33
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
-        externalNativeBuild {
-            cmake {
-                cppFlags ""
-            }
-        }
     }
 
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-    externalNativeBuild {
-        cmake {
-            path "src/main/cpp/CMakeLists.txt"
-            version "3.22.1"
         }
     }
     compileOptions {
@@ -48,4 +33,6 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    api 'dom4j:dom4j:1.6.1'
 }
+
